@@ -1,26 +1,62 @@
 <!DOCTYPE html>
-<html>
+<!--生機系 B03611008 黃山
+R語言html，css練習-->
+<html lang="zh-Hant-TW">
     <head>
         <meta charset="UTF-8">
         <title>Ces't la vie</title>
         <style>
+            /*css*/
             body {
                 background-color: lightblue;
             }
             h1 {
                 color: whitesmoke;
                 text-align: center;
+                font-size: 60px;
+            }
+            hr{
+                align-content: center;
+            }
+            #mavis{
+                border: 0px;
             }
             
         </style>
+
+        <!--icon-->
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="bookmark" href="favicon.ico">
     </head>
     <body>
-        <strong><h1>This is cooper</h1></strong>
-        <hr width=80% color=0000ff size=2 align=center>
+        <!--標題-->
+        <h1>This is cooper</h1>
+        <!--分隔線-->
+        <hr width=90% color=0000ff size=3>
+        <!--超連結圖片-->
         <a href="https://www.google.com/search?q=%E8%B2%93%E5%92%AA&oq=%E8%B2%93%E5%92%AA&aqs=chrome..69i57j69i59j0l4j69i61l2.6101j0j7&sourceid=chrome&ie=UTF-8">
         <img src="cooper.png" width="300" alt="梅"></a>
-        
+        <!--音檔-->
+        <audio id="goodnight" src="goodnight.mp3"></audio>
+        <audio id="whattodo" src="whattodo.mp3"></audio>
+        <!--圖片按鈕播放鍵-->
+        <button id="mavis" onmousedown="Playwhattodo()"><img src="cooper.png" width="300" alt="梅" ></button>
+        <!--超連結func-->
+        <a href="javascript:Playgoodnight();"><img src="cooper.png" width="300" alt="梅" id="mav"></a>
+        <!--圖片直接點擊，鼠標不變-->
+        <img src="cooper.png" width="300" alt="梅" onmousedown="Playgoodnight()">
+    
     </body>
+
+    <script language="javascript">
+    /*取得資料＆播放音訊*/
+    function Playgoodnight(){
+        var music = document.getElementById('goodnight');
+        music.play();
+    }
+    function Playwhattodo(){
+        var music = document.getElementById('whattodo');
+        music.play();
+    }
+    </script>
 </html>
