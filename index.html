@@ -15,48 +15,70 @@ R語言html，css練習-->
                 text-align: center;
                 font-size: 60px;
             }
-            hr{
+            hr {
                 align-content: center;
             }
-            #mavis{
+            #mavis {
                 border: 0px;
             }
-            
+            #pback1{
+                /*background-color: gray;*/
+                text-align: center;
+                border-top: 6px solid orange;
+                border-bottom: 6px double orange;
+                padding: 10px;
+                margin: 10px;
+            }
         </style>
-
+        <script language="javascript">
+            /*取得資料＆播放音訊*/
+            function Playgoodnight(){
+                var music = document.getElementById('goodnight');
+                music.play();
+            }
+            function Playwhattodo(){
+                var music = document.getElementById('whattodo');
+                music.play();
+            }
+        </script>
         <!--icon-->
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="bookmark" href="favicon.ico">
     </head>
+
     <body>
         <!--標題-->
-        <h1>This is cooper</h1>
+        <h1>This is <ins>cooper</ins></h1>
         <!--分隔線-->
         <hr width=90% color=0000ff size=3>
         <!--超連結圖片-->
-        <a href="https://www.google.com/search?q=%E8%B2%93%E5%92%AA&oq=%E8%B2%93%E5%92%AA&aqs=chrome..69i57j69i59j0l4j69i61l2.6101j0j7&sourceid=chrome&ie=UTF-8">
+        <a href="https://tinyurl.com/teenu53" title="google貓咪" target="_blank">
         <img src="cooper.png" width="300" alt="梅"></a>
         <!--音檔-->
         <audio id="goodnight" src="goodnight.mp3"></audio>
         <audio id="whattodo" src="whattodo.mp3"></audio>
         <!--圖片按鈕播放鍵-->
-        <button id="mavis" onmousedown="Playwhattodo()"><img src="cooper.png" width="300" alt="梅" ></button>
-        <!--超連結func-->
-        <a href="javascript:Playgoodnight();"><img src="cooper.png" width="300" alt="梅" id="mav"></a>
-        <!--圖片直接點擊，鼠標不變-->
+        <button id="mavis" onmousedown="Playwhattodo()" title="whattodo"><img src="cooper.png" width="300" alt="梅" ></button>
+        <!--超連結func
+        <a href="javascript:Playgoodnight();"><img src="cooper.png" width="300" alt="梅"></a>
+        -->
+        <!--圖片直接點擊，鼠標不變
         <img src="cooper.png" width="300" alt="梅" onmousedown="Playgoodnight()">
-    
+        -->
+        <p id="pback1">cooper說：<q>賀喔</q></p>
+        <p>cooooooooooooooperrr</p>
+        <!--圖像詩-->
+        <pre>     
+                  rr
+                 errr
+                p    r
+               o      r
+             co        r
+             
+        </pre>
+        <!--連結到another-->
+        <a href="another.html">踩我</a>
     </body>
 
-    <script language="javascript">
-    /*取得資料＆播放音訊*/
-    function Playgoodnight(){
-        var music = document.getElementById('goodnight');
-        music.play();
-    }
-    function Playwhattodo(){
-        var music = document.getElementById('whattodo');
-        music.play();
-    }
-    </script>
+
 </html>
