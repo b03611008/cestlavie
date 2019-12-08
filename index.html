@@ -18,6 +18,22 @@ R語言html，css練習-->
             hr {
                 align-content: center;
             }
+            table, th, td {
+                border: 1px double black;
+                /* border-collapse: collapse; */
+            }
+            table#cooperfood {
+                width: 100%;
+            }
+            table#cooperfood th, td {
+                text-align: center;
+            }
+            table#cooperfood tr:nth-child(even) {
+                background-color: palegreen;
+            }
+            table#cooperfood tr:nth-child(odd) {
+                background-color: #c40d0d;
+            }
             #mavis {
                 border: 0px;
             }
@@ -103,9 +119,35 @@ R語言html，css練習-->
         </div>
         <!--連結到another-->
         <a href="another.html">踩我</a>
-
+         
+        <br><br>
+        <!-- 表格 -->
+        <!-- 怎麼把每格用成一樣大小? -->
+        <caption>Cooper 一週伙食</caption>
+        <table id="cooperfood">
+            <tr>
+                <th>週一</th>
+                <th>週二</th>
+                <th>週三</th>
+                <th>週四</th>
+                <th>週五</th>
+                <th colspan="2">週末</th>
+            </tr>
+            <tr>
+                <td>烤魷魚</td>
+                <td>烤玉米</td>
+                <td>紅蘿蔔</td>
+                <td>米血</td>
+                <td>小魚乾</td>
+                <td>隨心</td>
+                <td>所欲</td>
+            </tr>
+        </table>
+        <!-- 可以用id當成bookmark -->
+        <a href="another.html#Ch1">Ch1</a>
+        <!-- footer還再研究 -->
         <footer id="footer">
-            <p>生機系 B03611008 黃山</p>
+            <p id="me">生機系 B03611008 黃山</p>
         </footer>
     </body>
 
