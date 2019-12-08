@@ -21,7 +21,7 @@ R語言html，css練習-->
             #mavis {
                 border: 0px;
             }
-            #pback1{
+            #pback1 {
                 /*background-color: gray;*/
                 text-align: center;
                 border-top: 6px solid orange;
@@ -29,6 +29,25 @@ R語言html，css練習-->
                 padding: 10px;
                 margin: 10px;
             }
+            #footer {
+                background-color: pink;
+                height: 40px;
+                /* box-sizing: border-box; */
+                position: relative;
+                bottom: 0px;
+                text-align: right;
+                color: gray;
+                font-size: 16px;
+            }
+            .pic {
+                background-color: lightseagreen;
+                width: 640px;
+                
+            }
+            .doc {
+                background-color: lime;
+            }
+            
         </style>
         <script language="javascript">
             /*取得資料＆播放音訊*/
@@ -51,33 +70,43 @@ R語言html，css練習-->
         <h1>This is <ins>cooper</ins></h1>
         <!--分隔線-->
         <hr width=90% color=0000ff size=3>
-        <!--超連結圖片-->
-        <a href="https://tinyurl.com/teenu53" title="google貓咪" target="_blank">
-        <img src="cooper.png" width="300" alt="梅"></a>
         <!--音檔-->
         <audio id="goodnight" src="goodnight.mp3"></audio>
         <audio id="whattodo" src="whattodo.mp3"></audio>
-        <!--圖片按鈕播放鍵-->
-        <button id="mavis" onmousedown="Playwhattodo()" title="whattodo"><img src="cooper.png" width="300" alt="梅" ></button>
-        <!--超連結func
-        <a href="javascript:Playgoodnight();"><img src="cooper.png" width="300" alt="梅"></a>
-        -->
-        <!--圖片直接點擊，鼠標不變
-        <img src="cooper.png" width="300" alt="梅" onmousedown="Playgoodnight()">
-        -->
+        <div class="pic">
+            <!-- 超連結圖片 -->
+            <a href="https://tinyurl.com/teenu53" title="google貓咪" target="_blank">
+            <img src="cooper.png" width="308" alt="梅"></a>
+            <!--圖片按鈕播放鍵-->
+            <button id="mavis" onmousedown="Playwhattodo()" title="whattodo"><img src="cooper.png" width="300" alt="梅" ></button>
+            <!--超連結func
+            <a href="javascript:Playgoodnight();"><img src="cooper.png" width="300" alt="梅"></a>
+            -->
+            <!--圖片直接點擊，鼠標不變
+            <img src="cooper.png" width="300" alt="梅" onmousedown="Playgoodnight()">
+            -->
+        </div>
+        
         <p id="pback1">cooper說：<q>賀喔</q></p>
-        <p>cooooooooooooooperrr</p>
-        <!--圖像詩-->
-        <pre>     
-                  rr
-                 errr
-                p    r
-               o      r
-             co        r
-             
-        </pre>
+        
+        <div class="doc">
+            <p>cooooooooooooooperrr</p>
+            <!--圖像詩-->
+            <pre>     
+                      rr
+                     errr
+                    p    r
+                   o      r
+                 co        r
+
+            </pre>
+        </div>
         <!--連結到another-->
         <a href="another.html">踩我</a>
+
+        <footer id="footer">
+            <p>生機系 B03611008 黃山</p>
+        </footer>
     </body>
 
 
