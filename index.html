@@ -1,155 +1,116 @@
 <!DOCTYPE html>
-<!--生機系 B03611008 黃山
-R語言html，css練習-->
+<!-- 生機系 B03611008 黃山 -->
 <html lang="zh-Hant-TW">
     <head>
         <meta charset="UTF-8">
         <title>Ces't la vie</title>
         <style>
-            /*css*/
             body {
                 background-color: lightblue;
+            }
+            body,html {
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
             }
             h1 {
                 color: whitesmoke;
                 text-align: center;
                 font-size: 60px;
+                margin: 0px;
             }
             hr {
+                /* 好像css錯誤 */
                 align-content: center;
+                width: 95%;
+                color: blue;
+                size: 3px;
             }
-            table, th, td {
-                border: 1px double black;
-                /* border-collapse: collapse; */
+            /* 製作橫條選單header */
+            ul {
+                list-style-type: none;
+                margin: 0px;
+                padding: 0px;
+                overflow: hidden;
+                background-color: black;
             }
-            table#cooperfood {
-                width: 100%;
+            li {
+                float: left;
             }
-            table#cooperfood th, td {
+            li a {
+                display: block;
+                color: white;
                 text-align: center;
+                padding: 16px;
+                text-decoration: none;
             }
-            table#cooperfood tr:nth-child(even) {
-                background-color: palegreen;
+            li a:hover {
+                background-color: gray;
             }
-            table#cooperfood tr:nth-child(odd) {
-                background-color: #c40d0d;
+            /* end */            
+            #wrapper {
+                /* 設定高度最小為100%, 如果內容區塊很多, 可以長大 */
+                min-height: 100%;
+                /* 位置設為relative, 作為footer區塊位置的參考 */
+                position: relative;
             }
-            #mavis {
-                border: 0px;
+            #header{
+                /* background-color: black; */
+                /* height: 30px; */
+                /* padding: 10px; */
             }
-            #pback1 {
-                /*background-color: gray;*/
-                text-align: center;
-                border-top: 6px solid orange;
-                border-bottom: 6px double orange;
+            #content{
+                /* 留出header及footer區塊的空間 */
                 padding: 10px;
-                margin: 10px;
+                /* padding-top: 30px; */
+                padding-bottom: 40px;
             }
             #footer {
                 background-color: pink;
-                height: 40px;
-                /* box-sizing: border-box; */
-                position: relative;
-                bottom: 0px;
-                text-align: right;
+                box-sizing: border-box;
+                position: absolute;
+                text-align: center;
                 color: gray;
                 font-size: 16px;
+                height: 40px;
+                width: 100%;
+                bottom: 0px;
             }
-            .pic {
-                background-color: lightseagreen;
-                width: 640px;
-                
+            .pic_info{
+                background: gray;
+                width: 400px;
+
             }
-            .doc {
-                background-color: lime;
-            }
-            
         </style>
-        <script language="javascript">
-            /*取得資料＆播放音訊*/
-            function Playgoodnight(){
-                var music = document.getElementById('goodnight');
-                music.play();
-            }
-            function Playwhattodo(){
-                var music = document.getElementById('whattodo');
-                music.play();
-            }
-        </script>
-        <!--icon-->
-        <link rel="shortcut icon" href="favicon.ico">
-        <link rel="bookmark" href="favicon.ico">
     </head>
-
     <body>
-        <!--標題-->
-        <h1>This is <ins>cooper</ins></h1>
-        <!--分隔線-->
-        <hr width=90% color=0000ff size=3>
-        <!--音檔-->
-        <audio id="goodnight" src="goodnight.mp3"></audio>
-        <audio id="whattodo" src="whattodo.mp3"></audio>
-        <div class="pic">
-            <!-- 超連結圖片 -->
-            <a href="https://tinyurl.com/teenu53" title="google貓咪" target="_blank">
-            <img src="cooper.png" width="308" alt="梅"></a>
-            <!--圖片按鈕播放鍵-->
-            <button id="mavis" onmousedown="Playwhattodo()" title="whattodo"><img src="cooper.png" width="300" alt="梅" ></button>
-            <!--超連結func
-            <a href="javascript:Playgoodnight();"><img src="cooper.png" width="300" alt="梅"></a>
-            -->
-            <!--圖片直接點擊，鼠標不變
-            <img src="cooper.png" width="300" alt="梅" onmousedown="Playgoodnight()">
-            -->
+        <div id="wrapper">
+            <div id="header">
+                <ul>
+                    <li><a href="another.html">another</a></li>
+                    <li><a href="example.html">example</a></li>
+                </ul>
+            </div>
+            <div id="content">
+                <h1>This is <ins>cooper</ins></h1>
+                <hr color="blue" size="3px">
+                <img src="cooper.png" alt="梅" width="400px">
+                <p class="pic_info">這是cooper，是一隻家貓，為小型貓科動物。此外也有其他未經過《國際動物命名法規》認可的命名，
+                    例如Felis cooper。根據遺傳學及考古學分析，人類馴養貓的紀錄可追溯至10,000年前的肥沃月灣地區，古埃及人飼養貓
+                    的紀錄可追溯至3,600年前，目的可能為捕鼠及其他齧齒目動物，以防止牠們吃掉榖物。現在貓成為世界上最為廣泛的寵物之
+                    一，飼養率僅次於犬（或稱狗），但同時也是危害十分廣泛的外來種，由於獵捕的習慣，威脅著很多原生鳥類、齧齒類的生存
+                    是世界百大外來入侵種之一。更直接的風險是因狩獵而感染野外病菌的貓，會引入例如狂犬病等進入人類生活圈，因此對飼主
+                    知識技術與社會責任要求也較高，先進國家的公衛系統普遍會針對野貓進行抓捕絕育，管理意義即在於此。長期飼育的貓平均
+                    壽命為12年以上（相當於人類64歲），歷史上最長壽的貓則達38歲（等於人類168歲，來自美國德州）。小部分地方文化
+                    在過去亦有食用貓肉的習俗，如越南、中國廣東，瑞士等地，但現今大部分地區因衛生防疫，或是以貓為寵物等因素而禁止食
+                    用貓肉。</p>
+                <br>
+                <p>前往<a href="another.html">another</a>，<a href="example.html">example</a></p>
+            </div>
+            
+            <footer id="footer">
+                    <p>生機系 B03611008 黃山</p>
+            </footer> 
         </div>
-        
-        <p id="pback1">cooper說：<q>賀喔</q></p>
-        
-        <div class="doc">
-            <p>cooooooooooooooperrr</p>
-            <!--圖像詩-->
-            <pre>     
-                      rr
-                     errr
-                    p    r
-                   o      r
-                 co        r
-
-            </pre>
-        </div>
-        <!--連結到another-->
-        <a href="another.html">踩我</a>
-         
-        <br><br>
-        <!-- 表格 -->
-        <!-- 怎麼把每格用成一樣大小? -->
-        <caption>Cooper 一週伙食</caption>
-        <table id="cooperfood">
-            <tr>
-                <th>週一</th>
-                <th>週二</th>
-                <th>週三</th>
-                <th>週四</th>
-                <th>週五</th>
-                <th colspan="2">週末</th>
-            </tr>
-            <tr>
-                <td>烤魷魚</td>
-                <td>烤玉米</td>
-                <td>紅蘿蔔</td>
-                <td>米血</td>
-                <td>小魚乾</td>
-                <td>隨心</td>
-                <td>所欲</td>
-            </tr>
-        </table>
-        <!-- 可以用id當成bookmark -->
-        <a href="another.html#Ch1">Ch1</a>
-        <!-- footer還再研究 -->
-        <footer id="footer">
-            <p id="me">生機系 B03611008 黃山</p>
-        </footer>
     </body>
-
-
 </html>

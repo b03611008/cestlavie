@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--生機系 B03611008 黃山
+R語言html，css練習-->
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ces't la vie</title>
+        <style>
+            /*css*/
+            body {
+                background-color: lightblue;
+            }
+            h1 {
+                color: whitesmoke;
+                text-align: center;
+                font-size: 60px;
+            }
+            hr {
+                align-content: center;
+            }
+            table, th, td {
+                border: 1px double black;
+                /* border-collapse: collapse; */
+            }
+            table#cooperfood {
+                width: 100%;
+            }
+            table#cooperfood th, td {
+                text-align: center;
+            }
+            table#cooperfood tr:nth-child(even) {
+                background-color: palegreen;
+            }
+            table#cooperfood tr:nth-child(odd) {
+                background-color: #c40d0d;
+            }
+            #mavis {
+                border: 0px;
+            }
+            #pback1 {
+                /*background-color: gray;*/
+                text-align: center;
+                border-top: 6px solid orange;
+                border-bottom: 6px double orange;
+                padding: 10px;
+                margin: 10px;
+            }
+            #footer {
+                background-color: pink;
+                height: 40px;
+                /* box-sizing: border-box; */
+                position: relative;
+                bottom: 0px;
+                text-align: right;
+                color: gray;
+                font-size: 16px;
+            }
+            .pic {
+                background-color: lightseagreen;
+                width: 640px;
+                
+            }
+            .doc {
+                background-color: lime;
+            }
+            
+        </style>
+        <script language="javascript">
+            /*取得資料＆播放音訊*/
+            function Playgoodnight(){
+                var music = document.getElementById('goodnight');
+                music.play();
+            }
+            function Playwhattodo(){
+                var music = document.getElementById('whattodo');
+                music.play();
+            }
+        </script>
+        <!--icon-->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="bookmark" href="favicon.ico">
+    </head>
+
+    <body>
+        <!--標題-->
+        <h1>This is <ins>cooper</ins></h1>
+        <!--分隔線-->
+        <hr width=90% color=0000ff size=3>
+        <!--音檔-->
+        <audio id="goodnight" src="goodnight.mp3"></audio>
+        <audio id="whattodo" src="whattodo.mp3"></audio>
+        
+        <div class="pic">
+            <!-- 超連結圖片 -->
+            <a href="https://tinyurl.com/teenu53" title="google貓咪" target="_blank">
+            <img src="cooper.png" width="308" alt="梅"></a>
+            <!--圖片按鈕播放鍵-->
+            <button id="mavis" onmousedown="Playwhattodo()" title="whattodo"><img src="cooper.png" width="300" alt="梅" ></button>
+            <!--超連結func
+            <a href="javascript:Playgoodnight();"><img src="cooper.png" width="300" alt="梅"></a>
+            -->
+            <!--圖片直接點擊，鼠標不變
+            <img src="cooper.png" width="300" alt="梅" onmousedown="Playgoodnight()">
+            -->
+        </div>
+        
+        <p id="pback1">cooper說：<q>賀喔</q></p>
+        
+        <div class="doc">
+            <p>cooooooooooooooperrr</p>
+            <!--圖像詩-->
+            <pre>     
+                      rr
+                     errr
+                    p    r
+                   o      r
+                 co        r
+
+            </pre>
+        </div>
+
+        <!--連結到another-->
+        <a href="another.html">踩我</a>
+         
+        <br><br>
+
+        <!-- 表格 caption一定要接再table下面-->
+        <!-- 怎麼把每格用成一樣大小? -->
+        <table id="cooperfood">
+            <caption>Cooper 一週伙食</caption>
+            <tr>
+                <th>週一</th>
+                <th>週二</th>
+                <th>週三</th>
+                <th>週四</th>
+                <th>週五</th>
+                <th colspan="2">週末</th>
+            </tr>
+            <tr>
+                <td>烤魷魚</td>
+                <td>烤玉米</td>
+                <td>紅蘿蔔</td>
+                <td>米血</td>
+                <td>小魚乾</td>
+                <td>隨心</td>
+                <td>所欲</td>
+            </tr>
+        </table>
+        <!-- 圖片連結 -->
+        <a href="index.html"><img src="ym.png" alt="ym" width="200px"></a>
+
+        <!-- 可以用id當成bookmark -->
+        <a href="another.html#Ch1">Ch1</a>
+        <!-- footer再研究 -->
+        <footer>
+            <p>生機系 B03611008 黃山</p>
+        </footer>
+    </body>
+
+
+</html>
